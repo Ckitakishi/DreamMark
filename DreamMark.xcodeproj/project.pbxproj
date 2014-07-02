@@ -21,6 +21,10 @@
 		6AC2A8CC1964A03F00187008 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC2A8AE1964A03F00187008 /* UIKit.framework */; };
 		6AC2A8D41964A03F00187008 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AC2A8D21964A03F00187008 /* InfoPlist.strings */; };
 		6AC2A8D61964A03F00187008 /* DreamMarkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC2A8D51964A03F00187008 /* DreamMarkTests.m */; };
+		6AC2A8E11964A3B800187008 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AC2A8E01964A3B800187008 /* home.png */; };
+		6AC2A8E61964A3C600187008 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AC2A8E21964A3C600187008 /* save.png */; };
+		6AC2A8E81964A3C600187008 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AC2A8E41964A3C600187008 /* share.png */; };
+		6AC2A8EC1964A7C200187008 /* DMGraffitiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC2A8EB1964A7C200187008 /* DMGraffitiViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,11 @@
 		6AC2A8D11964A03F00187008 /* DreamMarkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DreamMarkTests-Info.plist"; sourceTree = "<group>"; };
 		6AC2A8D31964A03F00187008 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6AC2A8D51964A03F00187008 /* DreamMarkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DreamMarkTests.m; sourceTree = "<group>"; };
+		6AC2A8E01964A3B800187008 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		6AC2A8E21964A3C600187008 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
+		6AC2A8E41964A3C600187008 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		6AC2A8EA1964A7C200187008 /* DMGraffitiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMGraffitiViewController.h; sourceTree = "<group>"; };
+		6AC2A8EB1964A7C200187008 /* DMGraffitiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMGraffitiViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +136,9 @@
 		6AC2A8B11964A03F00187008 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6AC2A8E01964A3B800187008 /* home.png */,
+				6AC2A8E21964A3C600187008 /* save.png */,
+				6AC2A8E41964A3C600187008 /* share.png */,
 				6AC2A8B21964A03F00187008 /* DreamMark-Info.plist */,
 				6AC2A8B31964A03F00187008 /* InfoPlist.strings */,
 				6AC2A8B61964A03F00187008 /* main.m */,
@@ -156,6 +168,8 @@
 		6AC2A8DF1964A18400187008 /* ControllerViews */ = {
 			isa = PBXGroup;
 			children = (
+				6AC2A8EA1964A7C200187008 /* DMGraffitiViewController.h */,
+				6AC2A8EB1964A7C200187008 /* DMGraffitiViewController.m */,
 			);
 			name = ControllerViews;
 			sourceTree = "<group>";
@@ -237,7 +251,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AC2A8E11964A3B800187008 /* home.png in Resources */,
+				6AC2A8E61964A3C600187008 /* save.png in Resources */,
 				6AC2A8C31964A03F00187008 /* Images.xcassets in Resources */,
+				6AC2A8E81964A3C600187008 /* share.png in Resources */,
 				6AC2A8B51964A03F00187008 /* InfoPlist.strings in Resources */,
 				6AC2A8BE1964A03F00187008 /* Main.storyboard in Resources */,
 			);
@@ -259,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AC2A8B71964A03F00187008 /* main.m in Sources */,
+				6AC2A8EC1964A7C200187008 /* DMGraffitiViewController.m in Sources */,
 				6AC2A8C11964A03F00187008 /* DMViewController.m in Sources */,
 				6AC2A8BB1964A03F00187008 /* DMAppDelegate.m in Sources */,
 			);
@@ -465,6 +483,7 @@
 				6AC2A8DB1964A03F00187008 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6AC2A8DC1964A03F00187008 /* Build configuration list for PBXNativeTarget "DreamMarkTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +492,7 @@
 				6AC2A8DE1964A03F00187008 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

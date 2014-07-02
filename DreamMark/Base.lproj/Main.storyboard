@@ -30,16 +30,25 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57h-sf-0rs">
                                 <rect key="frame" x="100" y="367" width="120" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="拼图">
+                                    <color key="titleColor" red="1" green="0.37995729319927607" blue="0.97705134902438462" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="UHi-jF-pYV" kind="modal" identifier="puzzle" id="7j6-Ew-ETZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCY-Ed-xEz">
                                 <rect key="frame" x="100" y="431" width="120" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="涂鸦">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="W4D-EI-Sqm" kind="modal" identifier="graffiti" id="fgn-aM-xZX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -52,6 +61,120 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="47" y="-4"/>
+        </scene>
+        <!--Graffiti View Controller - 涂鸦-->
+        <scene sceneID="Dk0-3F-2fK">
+            <objects>
+                <viewController id="gwl-ZJ-BET" customClass="DMGraffitiViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h0Y-Pl-aDa"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vbc-lK-Rfb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dNb-00-UB5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vvm-9N-1qo">
+                                <rect key="frame" x="0.0" y="183" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xct-R8-Yro">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAK-pM-Bor">
+                                <rect key="frame" x="0.0" y="511" width="160" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpV-Z9-xgu">
+                                <rect key="frame" x="160" y="511" width="160" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="涂鸦" id="pLE-hp-ucR">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="ucn-Z6-ATn">
+                            <connections>
+                                <action selector="graffitiCancel:" destination="gwl-ZJ-BET" id="r4z-WE-hiQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="graffitiView" destination="Xct-R8-Yro" id="1mh-mt-JX5"/>
+                        <outlet property="myView" destination="vvm-9N-1qo" id="d3C-Ep-N1G"/>
+                        <outlet property="saveButton" destination="jAK-pM-Bor" id="aqk-4q-lIm"/>
+                        <outlet property="shareButton" destination="UpV-Z9-xgu" id="Wjm-3l-DUF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZP-Ke-wgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968" y="435"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LkL-d2-Fqz">
+            <objects>
+                <viewController id="y8l-oh-4My" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D10-6z-IXe"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qre-Ni-EfE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6T2-7G-mCY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XS7-D0-j4Q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6u2-mY-MA9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968" y="-219"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rg4-7U-THf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W4D-EI-Sqm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0X3-5b-6M2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gwl-ZJ-BET" kind="relationship" relationship="rootViewController" id="L6w-1g-qis"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z0A-u9-S7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="442" y="435"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bIi-pL-7yo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UHi-jF-pYV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cad-Vc-fG1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="y8l-oh-4My" kind="relationship" relationship="rootViewController" id="Ju7-h3-FPy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pef-vF-LhI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="442" y="-219"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
