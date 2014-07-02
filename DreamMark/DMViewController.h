@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface DMViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIImageView *homeView;
+@property (weak, nonatomic) IBOutlet UIButton *puzzleBtn;
+@property (weak, nonatomic) IBOutlet UIButton *graffitiBtn;
+@property (weak, nonatomic) IBOutlet UIImageView * homeView;
 
 @end
