@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6AC2A8AB1964A03F00187008 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC2A8AA1964A03F00187008 /* Foundation.framework */; };
+		6AC2A8AD1964A03F00187008 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC2A8AC1964A03F00187008 /* CoreGraphics.framework */; };
+		6AC2A8AF1964A03F00187008 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC2A8AE1964A03F00187008 /* UIKit.framework */; };
+		6AC2A8B51964A03F00187008 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AC2A8B31964A03F00187008 /* InfoPlist.strings */; };
+		6AC2A8B71964A03F00187008 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC2A8B61964A03F00187008 /* main.m */; };
+		6AC2A8BB1964A03F00187008 /* DMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC2A8BA1964A03F00187008 /* DMAppDelegate.m */; };
+		6AC2A8BE1964A03F00187008 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AC2A8BC1964A03F00187008 /* Main.storyboard */; };
+		6AC2A8C11964A03F00187008 /* DMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC2A8C01964A03F00187008 /* DMViewController.m */; };
+		6AC2A8C31964A03F00187008 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AC2A8C21964A03F00187008 /* Images.xcassets */; };
+		6AC2A8CA1964A03F00187008 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC2A8C91964A03F00187008 /* XCTest.framework */; };
+		6AC2A8CB1964A03F00187008 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC2A8AA1964A03F00187008 /* Foundation.framework */; };
+		6AC2A8CC1964A03F00187008 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC2A8AE1964A03F00187008 /* UIKit.framework */; };
+		6AC2A8D41964A03F00187008 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AC2A8D21964A03F00187008 /* InfoPlist.strings */; };
+		6AC2A8D61964A03F00187008 /* DreamMarkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC2A8D51964A03F00187008 /* DreamMarkTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6AC2A8CD1964A03F00187008 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AC2A89F1964A03F00187008 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AC2A8A61964A03F00187008;
+			remoteInfo = DreamMark;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6AC2A8A71964A03F00187008 /* DreamMark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamMark.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AC2A8AA1964A03F00187008 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6AC2A8AC1964A03F00187008 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6AC2A8AE1964A03F00187008 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6AC2A8B21964A03F00187008 /* DreamMark-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DreamMark-Info.plist"; sourceTree = "<group>"; };
+		6AC2A8B41964A03F00187008 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6AC2A8B61964A03F00187008 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6AC2A8B81964A03F00187008 /* DreamMark-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DreamMark-Prefix.pch"; sourceTree = "<group>"; };
+		6AC2A8B91964A03F00187008 /* DMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMAppDelegate.h; sourceTree = "<group>"; };
+		6AC2A8BA1964A03F00187008 /* DMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMAppDelegate.m; sourceTree = "<group>"; };
+		6AC2A8BD1964A03F00187008 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6AC2A8BF1964A03F00187008 /* DMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMViewController.h; sourceTree = "<group>"; };
+		6AC2A8C01964A03F00187008 /* DMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMViewController.m; sourceTree = "<group>"; };
+		6AC2A8C21964A03F00187008 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6AC2A8C81964A03F00187008 /* DreamMarkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamMarkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AC2A8C91964A03F00187008 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6AC2A8D11964A03F00187008 /* DreamMarkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DreamMarkTests-Info.plist"; sourceTree = "<group>"; };
+		6AC2A8D31964A03F00187008 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6AC2A8D51964A03F00187008 /* DreamMarkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DreamMarkTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6AC2A8A41964A03F00187008 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AC2A8AD1964A03F00187008 /* CoreGraphics.framework in Frameworks */,
+				6AC2A8AF1964A03F00187008 /* UIKit.framework in Frameworks */,
+				6AC2A8AB1964A03F00187008 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AC2A8C51964A03F00187008 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AC2A8CA1964A03F00187008 /* XCTest.framework in Frameworks */,
+				6AC2A8CC1964A03F00187008 /* UIKit.framework in Frameworks */,
+				6AC2A8CB1964A03F00187008 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6AC2A89E1964A03F00187008 = {
+			isa = PBXGroup;
+			children = (
+				6AC2A8B01964A03F00187008 /* DreamMark */,
+				6AC2A8CF1964A03F00187008 /* DreamMarkTests */,
+				6AC2A8A91964A03F00187008 /* Frameworks */,
+				6AC2A8A81964A03F00187008 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6AC2A8A81964A03F00187008 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6AC2A8A71964A03F00187008 /* DreamMark.app */,
+				6AC2A8C81964A03F00187008 /* DreamMarkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6AC2A8A91964A03F00187008 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AC2A8AA1964A03F00187008 /* Foundation.framework */,
+				6AC2A8AC1964A03F00187008 /* CoreGraphics.framework */,
+				6AC2A8AE1964A03F00187008 /* UIKit.framework */,
+				6AC2A8C91964A03F00187008 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6AC2A8B01964A03F00187008 /* DreamMark */ = {
+			isa = PBXGroup;
+			children = (
+				6AC2A8B91964A03F00187008 /* DMAppDelegate.h */,
+				6AC2A8BA1964A03F00187008 /* DMAppDelegate.m */,
+				6AC2A8BC1964A03F00187008 /* Main.storyboard */,
+				6AC2A8BF1964A03F00187008 /* DMViewController.h */,
+				6AC2A8C01964A03F00187008 /* DMViewController.m */,
+				6AC2A8C21964A03F00187008 /* Images.xcassets */,
+				6AC2A8B11964A03F00187008 /* Supporting Files */,
+			);
+			path = DreamMark;
+			sourceTree = "<group>";
+		};
+		6AC2A8B11964A03F00187008 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6AC2A8B21964A03F00187008 /* DreamMark-Info.plist */,
+				6AC2A8B31964A03F00187008 /* InfoPlist.strings */,
+				6AC2A8B61964A03F00187008 /* main.m */,
+				6AC2A8B81964A03F00187008 /* DreamMark-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6AC2A8CF1964A03F00187008 /* DreamMarkTests */ = {
+			isa = PBXGroup;
+			children = (
+				6AC2A8D51964A03F00187008 /* DreamMarkTests.m */,
+				6AC2A8D01964A03F00187008 /* Supporting Files */,
+			);
+			path = DreamMarkTests;
+			sourceTree = "<group>";
+		};
+		6AC2A8D01964A03F00187008 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6AC2A8D11964A03F00187008 /* DreamMarkTests-Info.plist */,
+				6AC2A8D21964A03F00187008 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6AC2A8A61964A03F00187008 /* DreamMark */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AC2A8D91964A03F00187008 /* Build configuration list for PBXNativeTarget "DreamMark" */;
+			buildPhases = (
+				6AC2A8A31964A03F00187008 /* Sources */,
+				6AC2A8A41964A03F00187008 /* Frameworks */,
+				6AC2A8A51964A03F00187008 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DreamMark;
+			productName = DreamMark;
+			productReference = 6AC2A8A71964A03F00187008 /* DreamMark.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6AC2A8C71964A03F00187008 /* DreamMarkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AC2A8DC1964A03F00187008 /* Build configuration list for PBXNativeTarget "DreamMarkTests" */;
+			buildPhases = (
+				6AC2A8C41964A03F00187008 /* Sources */,
+				6AC2A8C51964A03F00187008 /* Frameworks */,
+				6AC2A8C61964A03F00187008 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6AC2A8CE1964A03F00187008 /* PBXTargetDependency */,
+			);
+			name = DreamMarkTests;
+			productName = DreamMarkTests;
+			productReference = 6AC2A8C81964A03F00187008 /* DreamMarkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6AC2A89F1964A03F00187008 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DM;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Ckitakishi;
+				TargetAttributes = {
+					6AC2A8C71964A03F00187008 = {
+						TestTargetID = 6AC2A8A61964A03F00187008;
+					};
+				};
+			};
+			buildConfigurationList = 6AC2A8A21964A03F00187008 /* Build configuration list for PBXProject "DreamMark" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6AC2A89E1964A03F00187008;
+			productRefGroup = 6AC2A8A81964A03F00187008 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6AC2A8A61964A03F00187008 /* DreamMark */,
+				6AC2A8C71964A03F00187008 /* DreamMarkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6AC2A8A51964A03F00187008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AC2A8C31964A03F00187008 /* Images.xcassets in Resources */,
+				6AC2A8B51964A03F00187008 /* InfoPlist.strings in Resources */,
+				6AC2A8BE1964A03F00187008 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AC2A8C61964A03F00187008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AC2A8D41964A03F00187008 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6AC2A8A31964A03F00187008 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AC2A8B71964A03F00187008 /* main.m in Sources */,
+				6AC2A8C11964A03F00187008 /* DMViewController.m in Sources */,
+				6AC2A8BB1964A03F00187008 /* DMAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AC2A8C41964A03F00187008 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AC2A8D61964A03F00187008 /* DreamMarkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6AC2A8CE1964A03F00187008 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6AC2A8A61964A03F00187008 /* DreamMark */;
+			targetProxy = 6AC2A8CD1964A03F00187008 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6AC2A8B31964A03F00187008 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AC2A8B41964A03F00187008 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6AC2A8BC1964A03F00187008 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AC2A8BD1964A03F00187008 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6AC2A8D21964A03F00187008 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AC2A8D31964A03F00187008 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6AC2A8D71964A03F00187008 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6AC2A8D81964A03F00187008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6AC2A8DA1964A03F00187008 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DreamMark/DreamMark-Prefix.pch";
+				INFOPLIST_FILE = "DreamMark/DreamMark-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6AC2A8DB1964A03F00187008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DreamMark/DreamMark-Prefix.pch";
+				INFOPLIST_FILE = "DreamMark/DreamMark-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6AC2A8DD1964A03F00187008 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DreamMark.app/DreamMark";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DreamMark/DreamMark-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DreamMarkTests/DreamMarkTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6AC2A8DE1964A03F00187008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DreamMark.app/DreamMark";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DreamMark/DreamMark-Prefix.pch";
+				INFOPLIST_FILE = "DreamMarkTests/DreamMarkTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6AC2A8A21964A03F00187008 /* Build configuration list for PBXProject "DreamMark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AC2A8D71964A03F00187008 /* Debug */,
+				6AC2A8D81964A03F00187008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AC2A8D91964A03F00187008 /* Build configuration list for PBXNativeTarget "DreamMark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AC2A8DA1964A03F00187008 /* Debug */,
+				6AC2A8DB1964A03F00187008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6AC2A8DC1964A03F00187008 /* Build configuration list for PBXNativeTarget "DreamMarkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AC2A8DD1964A03F00187008 /* Debug */,
+				6AC2A8DE1964A03F00187008 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6AC2A89F1964A03F00187008 /* Project object */;
+}
