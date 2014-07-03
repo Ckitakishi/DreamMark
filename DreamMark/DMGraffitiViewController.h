@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DMGraffitiViewController : UIViewController
+- (IBAction)graffitiClear:(id)sender;
 - (IBAction)acitonShare:(id)sender;
 - (IBAction)actionSave:(id)sender;
 - (IBAction)buttonEraser:(id)sender;

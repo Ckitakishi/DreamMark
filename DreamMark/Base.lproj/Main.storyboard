@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3RD-C8-Iv3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home.png" translatesAutoresizingMaskIntoConstraints="NO" id="3RD-C8-Iv3">
                                 <rect key="frame" x="0.0" y="69" width="320" height="260"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -36,7 +36,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="UHi-jF-pYV" kind="modal" identifier="puzzle" id="7j6-Ew-ETZ"/>
+                                    <segue destination="WXW-4H-bcX" kind="modal" id="Dxy-F7-4VZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCY-Ed-xEz">
@@ -62,6 +62,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="47" y="-4"/>
+        </scene>
+        <!--Puzzle View Controller - 拼图-->
+        <scene sceneID="IMO-et-lVv">
+            <objects>
+                <viewController id="LVS-2F-aBY" customClass="DMPuzzleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jX0-DI-jPw"/>
+                        <viewControllerLayoutGuide type="bottom" id="HyX-hV-yWS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2dP-mw-WzP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NBy-by-Cw3">
+                                <rect key="frame" x="0.0" y="64" width="320" height="119"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nvj-i9-7Nl">
+                                <rect key="frame" x="0.0" y="183" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="grP-qd-AVv">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZa-Dh-anh">
+                                <rect key="frame" x="0.0" y="511" width="160" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqX-FW-nm2">
+                                <rect key="frame" x="160" y="511" width="160" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="拼图" id="mdP-sj-3A7"/>
+                    <connections>
+                        <outlet property="Canvas" destination="grP-qd-AVv" id="Cgy-0u-u9V"/>
+                        <outlet property="headView" destination="NBy-by-Cw3" id="gXS-md-t2D"/>
+                        <outlet property="puzzelView" destination="Nvj-i9-7Nl" id="Fny-AH-yQq"/>
+                        <outlet property="saveButton" destination="eZa-Dh-anh" id="cXy-iq-Py5"/>
+                        <outlet property="shareButton" destination="eqX-FW-nm2" id="aDS-HU-h68"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qqv-C9-40J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968" y="-253"/>
         </scene>
         <!--Graffiti View Controller - 涂鸦-->
         <scene sceneID="Dk0-3F-2fK">
@@ -185,6 +242,11 @@
                                 <action selector="graffitiCancel:" destination="gwl-ZJ-BET" id="r4z-WE-hiQ"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="清空" id="PYP-Qe-3Zi">
+                            <connections>
+                                <action selector="graffitiClear:" destination="gwl-ZJ-BET" id="ZPm-6B-gg5"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="Canvas" destination="Xct-R8-Yro" id="oq4-zO-E3C"/>
@@ -197,25 +259,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZP-Ke-wgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="968" y="435"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="LkL-d2-Fqz">
-            <objects>
-                <viewController id="y8l-oh-4My" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="D10-6z-IXe"/>
-                        <viewControllerLayoutGuide type="bottom" id="Qre-Ni-EfE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6T2-7G-mCY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="XS7-D0-j4Q"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6u2-mY-MA9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="968" y="-219"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rg4-7U-THf">
@@ -236,24 +279,27 @@
             <point key="canvasLocation" x="442" y="435"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="bIi-pL-7yo">
+        <scene sceneID="zom-F3-nFd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UHi-jF-pYV" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WXW-4H-bcX" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cad-Vc-fG1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6dm-cv-nTc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="y8l-oh-4My" kind="relationship" relationship="rootViewController" id="Ju7-h3-FPy"/>
+                        <segue destination="LVS-2F-aBY" kind="relationship" relationship="rootViewController" id="EEg-f6-jcL"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pef-vF-LhI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Xe-6O-Pw6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="442" y="-219"/>
+            <point key="canvasLocation" x="442" y="-253"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home.png" width="640" height="520"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

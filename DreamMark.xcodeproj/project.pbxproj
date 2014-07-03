@@ -25,6 +25,8 @@
 		6AC2A8E61964A3C600187008 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AC2A8E21964A3C600187008 /* save.png */; };
 		6AC2A8E81964A3C600187008 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AC2A8E41964A3C600187008 /* share.png */; };
 		6AC2A8EC1964A7C200187008 /* DMGraffitiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC2A8EB1964A7C200187008 /* DMGraffitiViewController.m */; };
+		FAD8F1271964F4DC003613D2 /* DMPuzzleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD8F1261964F4DC003613D2 /* DMPuzzleViewController.m */; };
+		FAD8F1291964F671003613D2 /* xianq.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD8F1281964F671003613D2 /* xianq.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,9 @@
 		6AC2A8E41964A3C600187008 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		6AC2A8EA1964A7C200187008 /* DMGraffitiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMGraffitiViewController.h; sourceTree = "<group>"; };
 		6AC2A8EB1964A7C200187008 /* DMGraffitiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMGraffitiViewController.m; sourceTree = "<group>"; };
+		FAD8F1251964F4DC003613D2 /* DMPuzzleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPuzzleViewController.h; sourceTree = "<group>"; };
+		FAD8F1261964F4DC003613D2 /* DMPuzzleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPuzzleViewController.m; sourceTree = "<group>"; };
+		FAD8F1281964F671003613D2 /* xianq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xianq.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +141,7 @@
 		6AC2A8B11964A03F00187008 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FAD8F1281964F671003613D2 /* xianq.png */,
 				6AC2A8E01964A3B800187008 /* home.png */,
 				6AC2A8E21964A3C600187008 /* save.png */,
 				6AC2A8E41964A3C600187008 /* share.png */,
@@ -170,6 +176,8 @@
 			children = (
 				6AC2A8EA1964A7C200187008 /* DMGraffitiViewController.h */,
 				6AC2A8EB1964A7C200187008 /* DMGraffitiViewController.m */,
+				FAD8F1251964F4DC003613D2 /* DMPuzzleViewController.h */,
+				FAD8F1261964F4DC003613D2 /* DMPuzzleViewController.m */,
 			);
 			name = ControllerViews;
 			sourceTree = "<group>";
@@ -257,6 +265,7 @@
 				6AC2A8E81964A3C600187008 /* share.png in Resources */,
 				6AC2A8B51964A03F00187008 /* InfoPlist.strings in Resources */,
 				6AC2A8BE1964A03F00187008 /* Main.storyboard in Resources */,
+				FAD8F1291964F671003613D2 /* xianq.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +288,7 @@
 				6AC2A8EC1964A7C200187008 /* DMGraffitiViewController.m in Sources */,
 				6AC2A8C11964A03F00187008 /* DMViewController.m in Sources */,
 				6AC2A8BB1964A03F00187008 /* DMAppDelegate.m in Sources */,
+				FAD8F1271964F4DC003613D2 /* DMPuzzleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -126,11 +126,17 @@ int fBrushWidth=5;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+//取消
 - (IBAction)graffitiCancel:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+//清空画布，把imageview中的image置为nil
+- (IBAction)graffitiClear:(id)sender
+{
+    self.Canvas.image = nil;
+}
+
 - (IBAction)actionD:(id)sender
 {
     bRubber=NO;
@@ -138,6 +144,7 @@ int fBrushWidth=5;
     fGreen=208.0f/255.0f;
     fBlue=0.0f/255.0f;
 }
+//分享功能使用sharesdk，暂未实现。。
 - (IBAction)acitonShare:(id)sender
 {
     
