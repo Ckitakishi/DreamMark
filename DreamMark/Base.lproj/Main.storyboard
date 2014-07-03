@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -92,6 +92,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="actionSave:" destination="gwl-ZJ-BET" eventType="touchUpInside" id="fiU-ls-sT6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpV-Z9-xgu">
                                 <rect key="frame" x="160" y="511" width="160" height="57"/>
@@ -99,6 +102,79 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="acitonShare:" destination="gwl-ZJ-BET" eventType="touchUpInside" id="gWa-bW-mdD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4v-LB-sEy">
+                                <rect key="frame" x="20" y="87" width="51" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
+                                <state key="normal" title="D">
+                                    <color key="titleColor" red="0.47350388804305993" green="0.74479830994897966" blue="0.24964890334948769" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionD:" destination="gwl-ZJ-BET" eventType="touchUpInside" id="N0H-ph-Ygb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umc-cc-NN8">
+                                <rect key="frame" x="79" y="87" width="46" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
+                                <state key="normal" title="R">
+                                    <color key="titleColor" red="0.4186058115277827" green="0.68799346382543791" blue="0.91535794005102045" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionR:" destination="gwl-ZJ-BET" eventType="touchUpInside" id="DN1-kQ-H4v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrD-xl-z6X">
+                                <rect key="frame" x="133" y="87" width="46" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
+                                <state key="normal" title="E">
+                                    <color key="titleColor" red="0.91535794005102045" green="0.76647824828694888" blue="0.17062732288476543" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonE:" destination="gwl-ZJ-BET" eventType="touchUpInside" id="b6K-xt-vCC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bne-e9-zPG">
+                                <rect key="frame" x="187" y="87" width="46" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
+                                <state key="normal" title="A">
+                                    <color key="titleColor" red="0.9467075892857143" green="0.1772098818575393" blue="0.11393906357748743" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonA:" destination="gwl-ZJ-BET" eventType="touchUpInside" id="Uwb-ne-aTY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l15-VB-27O">
+                                <rect key="frame" x="241" y="87" width="46" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="50"/>
+                                <state key="normal" title="M">
+                                    <color key="titleColor" red="0.023218271683673519" green="0.0043461225288205499" blue="0.0027943877956248817" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonM:" destination="gwl-ZJ-BET" eventType="touchUpInside" id="zgD-No-aBK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkf-5u-YvL">
+                                <rect key="frame" x="133" y="157" width="46" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonEraser:" destination="gwl-ZJ-BET" eventType="touchUpInside" id="XCa-Iy-fW2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -111,7 +187,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="graffitiView" destination="Xct-R8-Yro" id="1mh-mt-JX5"/>
+                        <outlet property="Canvas" destination="Xct-R8-Yro" id="oq4-zO-E3C"/>
+                        <outlet property="eraser" destination="qkf-5u-YvL" id="FXy-Tv-vqO"/>
                         <outlet property="myView" destination="vvm-9N-1qo" id="d3C-Ep-N1G"/>
                         <outlet property="saveButton" destination="jAK-pM-Bor" id="aqk-4q-lIm"/>
                         <outlet property="shareButton" destination="UpV-Z9-xgu" id="Wjm-3l-DUF"/>
