@@ -75,16 +75,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NBy-by-Cw3">
-                                <rect key="frame" x="0.0" y="64" width="320" height="119"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nvj-i9-7Nl">
-                                <rect key="frame" x="0.0" y="183" width="320" height="320"/>
+                                <rect key="frame" x="10" y="203" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="grP-qd-AVv">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                 </subviews>
@@ -104,15 +100,48 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="94J-eH-4xQ">
+                                <rect key="frame" x="0.0" y="109" width="320" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </scrollView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RRc-EQ-LgP">
+                                <rect key="frame" x="0.0" y="65" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="场景" id="yNR-xT-IEz">
+                                        <connections>
+                                            <action selector="bar1Action:" destination="LVS-2F-aBY" id="y9P-Bj-CjE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Qw7-LM-Zy9"/>
+                                    <barButtonItem title="人物" id="B2h-UO-ZnY">
+                                        <connections>
+                                            <action selector="bar2Action:" destination="LVS-2F-aBY" id="qda-bE-Dut"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="YRW-sj-GC9"/>
+                                    <barButtonItem title="事件" id="F1V-Xd-Opm"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="eUa-NN-3Hi"/>
+                                    <barButtonItem title="其它" id="5CW-ya-Ucv"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="拼图" id="mdP-sj-3A7"/>
+                    <navigationItem key="navigationItem" title="拼图" id="mdP-sj-3A7">
+                        <barButtonItem key="leftBarButtonItem" title="取消" id="HKw-Eh-1j6">
+                            <connections>
+                                <action selector="puzzleCancel:" destination="LVS-2F-aBY" id="Agw-bB-BJ3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="Canvas" destination="grP-qd-AVv" id="Cgy-0u-u9V"/>
-                        <outlet property="headView" destination="NBy-by-Cw3" id="gXS-md-t2D"/>
+                        <outlet property="bar1" destination="yNR-xT-IEz" id="fdM-fP-mqj"/>
+                        <outlet property="bar2" destination="B2h-UO-ZnY" id="761-jL-4Dt"/>
                         <outlet property="puzzelView" destination="Nvj-i9-7Nl" id="Fny-AH-yQq"/>
                         <outlet property="saveButton" destination="eZa-Dh-anh" id="cXy-iq-Py5"/>
+                        <outlet property="scrollview" destination="94J-eH-4xQ" id="7zz-Lp-iXT"/>
                         <outlet property="shareButton" destination="eqX-FW-nm2" id="aDS-HU-h68"/>
                     </connections>
                 </viewController>
@@ -133,11 +162,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vvm-9N-1qo">
-                                <rect key="frame" x="0.0" y="183" width="320" height="320"/>
+                                <rect key="frame" x="10" y="183" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xct-R8-Yro">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                 </subviews>

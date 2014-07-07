@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>number</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>s_sky</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>s_night</string>
+		<key>number</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>s_mountain</string>
+		<key>number</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>s_house</string>
+		<key>number</key>
+		<integer>4</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>s_cliff</string>
+		<key>number</key>
+		<integer>5</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>s_trees</string>
+		<key>number</key>
+		<integer>6</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>s_water</string>
+		<key>number</key>
+		<integer>7</integer>
+	</dict>
+</array>
+</plist>

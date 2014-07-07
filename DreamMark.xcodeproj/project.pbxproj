@@ -25,6 +25,20 @@
 		6AC2A8E61964A3C600187008 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AC2A8E21964A3C600187008 /* save.png */; };
 		6AC2A8E81964A3C600187008 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AC2A8E41964A3C600187008 /* share.png */; };
 		6AC2A8EC1964A7C200187008 /* DMGraffitiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC2A8EB1964A7C200187008 /* DMGraffitiViewController.m */; };
+		FA769FF4196A286000BA77F8 /* piclist.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA769FF2196A286000BA77F8 /* piclist.plist */; };
+		FA769FF5196A286000BA77F8 /* piclist2.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA769FF3196A286000BA77F8 /* piclist2.plist */; };
+		FA769FFA196A286E00BA77F8 /* mark.png in Resources */ = {isa = PBXBuildFile; fileRef = FA769FF6196A286E00BA77F8 /* mark.png */; };
+		FA769FFB196A286E00BA77F8 /* mark1.png in Resources */ = {isa = PBXBuildFile; fileRef = FA769FF7196A286E00BA77F8 /* mark1.png */; };
+		FA769FFC196A286E00BA77F8 /* mark2.png in Resources */ = {isa = PBXBuildFile; fileRef = FA769FF8196A286E00BA77F8 /* mark2.png */; };
+		FA769FFD196A286E00BA77F8 /* mark3.png in Resources */ = {isa = PBXBuildFile; fileRef = FA769FF9196A286E00BA77F8 /* mark3.png */; };
+		FA76A004196A288300BA77F8 /* s_trees.png in Resources */ = {isa = PBXBuildFile; fileRef = FA769FFE196A288300BA77F8 /* s_trees.png */; };
+		FA76A005196A288300BA77F8 /* s_water.png in Resources */ = {isa = PBXBuildFile; fileRef = FA769FFF196A288300BA77F8 /* s_water.png */; };
+		FA76A006196A288300BA77F8 /* s_cliff.png in Resources */ = {isa = PBXBuildFile; fileRef = FA76A000196A288300BA77F8 /* s_cliff.png */; };
+		FA76A007196A288300BA77F8 /* s_house.png in Resources */ = {isa = PBXBuildFile; fileRef = FA76A001196A288300BA77F8 /* s_house.png */; };
+		FA76A008196A288300BA77F8 /* s_mountain.png in Resources */ = {isa = PBXBuildFile; fileRef = FA76A002196A288300BA77F8 /* s_mountain.png */; };
+		FA76A009196A288300BA77F8 /* s_sky.png in Resources */ = {isa = PBXBuildFile; fileRef = FA76A003196A288300BA77F8 /* s_sky.png */; };
+		FA76A00B196A288D00BA77F8 /* s_night.png in Resources */ = {isa = PBXBuildFile; fileRef = FA76A00A196A288D00BA77F8 /* s_night.png */; };
+		FA76A00E196A2B4100BA77F8 /* DMPicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FA76A00D196A2B4100BA77F8 /* DMPicInfo.m */; };
 		FAD8F1271964F4DC003613D2 /* DMPuzzleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD8F1261964F4DC003613D2 /* DMPuzzleViewController.m */; };
 		FAD8F1291964F671003613D2 /* xianq.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD8F1281964F671003613D2 /* xianq.png */; };
 /* End PBXBuildFile section */
@@ -64,6 +78,21 @@
 		6AC2A8E41964A3C600187008 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		6AC2A8EA1964A7C200187008 /* DMGraffitiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMGraffitiViewController.h; sourceTree = "<group>"; };
 		6AC2A8EB1964A7C200187008 /* DMGraffitiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMGraffitiViewController.m; sourceTree = "<group>"; };
+		FA769FF2196A286000BA77F8 /* piclist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = piclist.plist; sourceTree = "<group>"; };
+		FA769FF3196A286000BA77F8 /* piclist2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = piclist2.plist; sourceTree = "<group>"; };
+		FA769FF6196A286E00BA77F8 /* mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mark.png; sourceTree = "<group>"; };
+		FA769FF7196A286E00BA77F8 /* mark1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mark1.png; sourceTree = "<group>"; };
+		FA769FF8196A286E00BA77F8 /* mark2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mark2.png; sourceTree = "<group>"; };
+		FA769FF9196A286E00BA77F8 /* mark3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mark3.png; sourceTree = "<group>"; };
+		FA769FFE196A288300BA77F8 /* s_trees.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_trees.png; sourceTree = "<group>"; };
+		FA769FFF196A288300BA77F8 /* s_water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_water.png; sourceTree = "<group>"; };
+		FA76A000196A288300BA77F8 /* s_cliff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_cliff.png; sourceTree = "<group>"; };
+		FA76A001196A288300BA77F8 /* s_house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_house.png; sourceTree = "<group>"; };
+		FA76A002196A288300BA77F8 /* s_mountain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_mountain.png; sourceTree = "<group>"; };
+		FA76A003196A288300BA77F8 /* s_sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_sky.png; sourceTree = "<group>"; };
+		FA76A00A196A288D00BA77F8 /* s_night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_night.png; sourceTree = "<group>"; };
+		FA76A00C196A2B4100BA77F8 /* DMPicInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPicInfo.h; sourceTree = "<group>"; };
+		FA76A00D196A2B4100BA77F8 /* DMPicInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPicInfo.m; sourceTree = "<group>"; };
 		FAD8F1251964F4DC003613D2 /* DMPuzzleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMPuzzleViewController.h; sourceTree = "<group>"; };
 		FAD8F1261964F4DC003613D2 /* DMPuzzleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMPuzzleViewController.m; sourceTree = "<group>"; };
 		FAD8F1281964F671003613D2 /* xianq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xianq.png; sourceTree = "<group>"; };
@@ -134,6 +163,8 @@
 				6AC2A8C01964A03F00187008 /* DMViewController.m */,
 				6AC2A8C21964A03F00187008 /* Images.xcassets */,
 				6AC2A8B11964A03F00187008 /* Supporting Files */,
+				FA76A00C196A2B4100BA77F8 /* DMPicInfo.h */,
+				FA76A00D196A2B4100BA77F8 /* DMPicInfo.m */,
 			);
 			path = DreamMark;
 			sourceTree = "<group>";
@@ -141,6 +172,19 @@
 		6AC2A8B11964A03F00187008 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA769FFE196A288300BA77F8 /* s_trees.png */,
+				FA769FFF196A288300BA77F8 /* s_water.png */,
+				FA76A000196A288300BA77F8 /* s_cliff.png */,
+				FA76A001196A288300BA77F8 /* s_house.png */,
+				FA76A002196A288300BA77F8 /* s_mountain.png */,
+				FA76A003196A288300BA77F8 /* s_sky.png */,
+				FA76A00A196A288D00BA77F8 /* s_night.png */,
+				FA769FF6196A286E00BA77F8 /* mark.png */,
+				FA769FF7196A286E00BA77F8 /* mark1.png */,
+				FA769FF8196A286E00BA77F8 /* mark2.png */,
+				FA769FF9196A286E00BA77F8 /* mark3.png */,
+				FA769FF2196A286000BA77F8 /* piclist.plist */,
+				FA769FF3196A286000BA77F8 /* piclist2.plist */,
 				FAD8F1281964F671003613D2 /* xianq.png */,
 				6AC2A8E01964A3B800187008 /* home.png */,
 				6AC2A8E21964A3C600187008 /* save.png */,
@@ -259,13 +303,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA769FF5196A286000BA77F8 /* piclist2.plist in Resources */,
+				FA76A007196A288300BA77F8 /* s_house.png in Resources */,
+				FA769FFB196A286E00BA77F8 /* mark1.png in Resources */,
 				6AC2A8E11964A3B800187008 /* home.png in Resources */,
+				FA76A009196A288300BA77F8 /* s_sky.png in Resources */,
+				FA76A004196A288300BA77F8 /* s_trees.png in Resources */,
+				FA76A00B196A288D00BA77F8 /* s_night.png in Resources */,
+				FA76A006196A288300BA77F8 /* s_cliff.png in Resources */,
 				6AC2A8E61964A3C600187008 /* save.png in Resources */,
 				6AC2A8C31964A03F00187008 /* Images.xcassets in Resources */,
 				6AC2A8E81964A3C600187008 /* share.png in Resources */,
 				6AC2A8B51964A03F00187008 /* InfoPlist.strings in Resources */,
+				FA769FFA196A286E00BA77F8 /* mark.png in Resources */,
 				6AC2A8BE1964A03F00187008 /* Main.storyboard in Resources */,
+				FA76A008196A288300BA77F8 /* s_mountain.png in Resources */,
+				FA769FFC196A286E00BA77F8 /* mark2.png in Resources */,
 				FAD8F1291964F671003613D2 /* xianq.png in Resources */,
+				FA769FFD196A286E00BA77F8 /* mark3.png in Resources */,
+				FA76A005196A288300BA77F8 /* s_water.png in Resources */,
+				FA769FF4196A286000BA77F8 /* piclist.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +346,7 @@
 				6AC2A8C11964A03F00187008 /* DMViewController.m in Sources */,
 				6AC2A8BB1964A03F00187008 /* DMAppDelegate.m in Sources */,
 				FAD8F1271964F4DC003613D2 /* DMPuzzleViewController.m in Sources */,
+				FA76A00E196A2B4100BA77F8 /* DMPicInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
