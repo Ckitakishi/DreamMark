@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>o_animal</string>
+		<key>number</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>o_bird</string>
+		<key>number</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>o_fire</string>
+		<key>number</key>
+		<integer>3</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>o_fish</string>
+		<key>number</key>
+		<integer>4</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>o_flower</string>
+		<key>number</key>
+		<integer>5</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>o_fruit</string>
+		<key>number</key>
+		<integer>6</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>o_music</string>
+		<key>number</key>
+		<integer>7</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>o_snake</string>
+		<key>number</key>
+		<integer>8</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>o_sonwOrRain</string>
+		<key>number</key>
+		<integer>9</integer>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>o_test</string>
+		<key>number</key>
+		<integer>10</integer>
+	</dict>
+</array>
+</plist>

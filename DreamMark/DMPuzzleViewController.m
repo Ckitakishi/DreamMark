@@ -79,6 +79,8 @@ int flag[4] = {0,0,0,0};
     
     myBarButtonItem[0] = self.bar1;
     myBarButtonItem[1] = self.bar2;
+    myBarButtonItem[2] = self.bar3;
+    myBarButtonItem[3] = self.bar4;
 }
 
 -(void)chooseImage:(UIButton *)button
@@ -162,6 +164,79 @@ int flag[4] = {0,0,0,0};
         }
     }
 }
+
+- (IBAction)bar3Action:(id)sender
+{
+    self.bar3.tintColor = [UIColor colorWithRed:238/255.0 green:15/255.0 blue:10/255.0 alpha:1];
+    NSInteger temp = [self judge:3];
+    
+    NSMutableArray * picsStory = [NSMutableArray arrayWithCapacity:0];
+    NSArray * aPlistStory = [[NSArray alloc]init];
+    aPlistStory = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"piclist3" ofType:@"plist"]];
+    DMPicInfo * picinfo = picinfo = [[DMPicInfo alloc]init];
+    for(NSDictionary * onePicInfo in aPlistStory)
+    {
+        picinfo.name = [onePicInfo objectForKey:@"name"];
+        picinfo.number = [onePicInfo objectForKey:@"number"];
+        [picsStory addObject:picinfo];
+    }
+    self.datasourceStory = [[NSArray alloc]initWithArray:picsStory];
+    for(int i= 0;i < self.datasourceStory.count;i++){
+        picinfo = [self.datasourceStory objectAtIndex:i];
+        if(picinfo){
+            [myArray[i] setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",
+                                                                [[aPlistStory objectAtIndex:i]objectForKey:@"name"]]] forState:UIControlStateNormal];
+            [myArray[i] addTarget:nil action:@selector(chooseImage:) forControlEvents:UIControlEventTouchUpInside];
+            [self.scrollview addSubview:buttons];
+        }
+    }
+    //用于判断之前的图片数量和现在的图片数量；
+    NSInteger inter=temp-self.datasourceStory.count;
+    if(inter > 0){
+        for(int i=0;i<(temp-self.datasourceStory.count);i++)
+        {
+            [myArray[i+self.datasourceStory.count]setBackgroundImage:nil forState:UIControlStateNormal];
+        }
+    }
+    
+}
+
+- (IBAction)bar4Action:(id)sender
+{
+    self.bar4.tintColor = [UIColor colorWithRed:202/255.0 green:169/255.0 blue:230/255.0 alpha:1];
+    NSInteger temp = [self judge:4];
+    
+    NSMutableArray * picsOthers = [NSMutableArray arrayWithCapacity:0];
+    NSArray * aPlistOthers = [[NSArray alloc]init];
+    aPlistOthers = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"piclist4" ofType:@"plist"]];
+    DMPicInfo * picinfo = picinfo = [[DMPicInfo alloc]init];
+    for(NSDictionary * onePicInfo in aPlistOthers)
+    {
+        picinfo.name = [onePicInfo objectForKey:@"name"];
+        picinfo.number = [onePicInfo objectForKey:@"number"];
+        [picsOthers addObject:picinfo];
+    }
+    self.datasourceOthers = [[NSArray alloc]initWithArray:picsOthers];
+    for(int i= 0;i < self.datasourceOthers.count;i++){
+        picinfo = [self.datasourceOthers objectAtIndex:i];
+        if(picinfo){
+            [myArray[i] setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",
+                                                                [[aPlistOthers objectAtIndex:i]objectForKey:@"name"]]] forState:UIControlStateNormal];
+            [myArray[i] addTarget:nil action:@selector(chooseImage:) forControlEvents:UIControlEventTouchUpInside];
+            [self.scrollview addSubview:buttons];
+        }
+    }
+    //用于判断之前的图片数量和现在的图片数量；
+    NSInteger inter=temp-self.datasourceOthers.count;
+    if(inter > 0){
+        for(int i=0;i<(temp-self.datasourceOthers.count);i++)
+        {
+            [myArray[i+self.datasourceOthers.count]setBackgroundImage:nil forState:UIControlStateNormal];
+        }
+    }
+
+}
+
 //确定当前所处位置；
 - (NSInteger)judge:(NSInteger)temp
 {
@@ -180,6 +255,12 @@ int flag[4] = {0,0,0,0};
     }
     if(temp1 == 1){
         return self.datasourceMark.count;
+    }
+    if(temp1 == 2){
+        return self.datasourceStory.count;
+    }
+    else if(temp1 == 3){
+        return self.datasourceOthers.count;
     }
     return 0;
 }
@@ -210,4 +291,6 @@ int flag[4] = {0,0,0,0};
 {
     self.Canvas.image = nil;
 }
+
+
 @end

@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface DMPuzzleViewController : UIViewController
+- (IBAction)bar4Action:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *bar4;
+- (IBAction)bar3Action:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *bar3;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *bar2;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *bar1;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollview;
@@ -19,6 +23,9 @@
 
 @property(nonatomic, strong) NSArray * datasource;
 @property(nonatomic, strong) NSArray * datasourceMark;
+@property(nonatomic, strong) NSArray * datasourceStory;
+@property(nonatomic, strong) NSArray * datasourceOthers;
+
 @property(nonatomic,strong) NSArray * aPlist;
 @property(nonatomic,strong) UIButton * buttons;
 @property(nonatomic,strong) NSMutableArray * buttonsArray;
