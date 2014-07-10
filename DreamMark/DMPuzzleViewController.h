@@ -9,15 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface DMPuzzleViewController : UIViewController
-- (IBAction)bar2Action:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *bar2;
-- (IBAction)bar1Action:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *bar1;
-
-- (IBAction)puzzleCancel:(id)sender;
-
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollview;
-
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 @property (weak, nonatomic) IBOutlet UIImageView *Canvas;
@@ -26,6 +20,13 @@
 @property(nonatomic, strong) NSArray * datasource;
 @property(nonatomic, strong) NSArray * datasourceMark;
 @property(nonatomic,strong) NSArray * aPlist;
-@property(nonatomic,strong) UIImageView * images;
-@property(nonatomic,strong) NSMutableArray * imagesArray;
+@property(nonatomic,strong) UIButton * buttons;
+@property(nonatomic,strong) NSMutableArray * buttonsArray;
+@property(nonatomic,strong) UIImage * selectedImage;
+
+- (IBAction)bar1Action:(id)sender;
+- (IBAction)bar2Action:(id)sender;
+- (IBAction)puzzleClear:(id)sender;
+- (IBAction)actionSave:(id)sender;
+- (IBAction)puzzleCancel:(id)sender;
 @end

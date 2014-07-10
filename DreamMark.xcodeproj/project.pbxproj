@@ -161,10 +161,10 @@
 				6AC2A8BC1964A03F00187008 /* Main.storyboard */,
 				6AC2A8BF1964A03F00187008 /* DMViewController.h */,
 				6AC2A8C01964A03F00187008 /* DMViewController.m */,
-				6AC2A8C21964A03F00187008 /* Images.xcassets */,
-				6AC2A8B11964A03F00187008 /* Supporting Files */,
 				FA76A00C196A2B4100BA77F8 /* DMPicInfo.h */,
 				FA76A00D196A2B4100BA77F8 /* DMPicInfo.m */,
+				6AC2A8C21964A03F00187008 /* Images.xcassets */,
+				6AC2A8B11964A03F00187008 /* Supporting Files */,
 			);
 			path = DreamMark;
 			sourceTree = "<group>";
@@ -172,17 +172,9 @@
 		6AC2A8B11964A03F00187008 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FA769FFE196A288300BA77F8 /* s_trees.png */,
-				FA769FFF196A288300BA77F8 /* s_water.png */,
-				FA76A000196A288300BA77F8 /* s_cliff.png */,
-				FA76A001196A288300BA77F8 /* s_house.png */,
-				FA76A002196A288300BA77F8 /* s_mountain.png */,
-				FA76A003196A288300BA77F8 /* s_sky.png */,
-				FA76A00A196A288D00BA77F8 /* s_night.png */,
-				FA769FF6196A286E00BA77F8 /* mark.png */,
-				FA769FF7196A286E00BA77F8 /* mark1.png */,
-				FA769FF8196A286E00BA77F8 /* mark2.png */,
-				FA769FF9196A286E00BA77F8 /* mark3.png */,
+				FACECD16196B883800BDDD2E /* New Group */,
+				FACECD15196B882000BDDD2E /* mark */,
+				FACECD14196B87F900BDDD2E /* scene */,
 				FA769FF2196A286000BA77F8 /* piclist.plist */,
 				FA769FF3196A286000BA77F8 /* piclist2.plist */,
 				FAD8F1281964F671003613D2 /* xianq.png */,
@@ -224,6 +216,38 @@
 				FAD8F1261964F4DC003613D2 /* DMPuzzleViewController.m */,
 			);
 			name = ControllerViews;
+			sourceTree = "<group>";
+		};
+		FACECD14196B87F900BDDD2E /* scene */ = {
+			isa = PBXGroup;
+			children = (
+				FA769FFE196A288300BA77F8 /* s_trees.png */,
+				FA769FFF196A288300BA77F8 /* s_water.png */,
+				FA76A000196A288300BA77F8 /* s_cliff.png */,
+				FA76A001196A288300BA77F8 /* s_house.png */,
+				FA76A002196A288300BA77F8 /* s_mountain.png */,
+				FA76A003196A288300BA77F8 /* s_sky.png */,
+				FA76A00A196A288D00BA77F8 /* s_night.png */,
+			);
+			name = scene;
+			sourceTree = "<group>";
+		};
+		FACECD15196B882000BDDD2E /* mark */ = {
+			isa = PBXGroup;
+			children = (
+				FA769FF6196A286E00BA77F8 /* mark.png */,
+				FA769FF7196A286E00BA77F8 /* mark1.png */,
+				FA769FF8196A286E00BA77F8 /* mark2.png */,
+				FA769FF9196A286E00BA77F8 /* mark3.png */,
+			);
+			name = mark;
+			sourceTree = "<group>";
+		};
+		FACECD16196B883800BDDD2E /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

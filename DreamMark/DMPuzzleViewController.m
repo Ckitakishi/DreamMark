@@ -14,10 +14,12 @@
 
 @implementation DMPuzzleViewController
 @synthesize aPlist;
-@synthesize images;
-@synthesize imagesArray;
+@synthesize buttons;
+@synthesize buttonsArray;
+@synthesize selectedImage;
 
-UIImageView * imageArray[20];
+UIButton * myArray[20];
+UIBarButtonItem * myBarButtonItem[4];
 int flag[4] = {0,0,0,0};
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,18 +33,8 @@ int flag[4] = {0,0,0,0};
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    [self.saveButton setBackgroundImage:[UIImage imageNamed:@"save.png"] forState:UIControlStateNormal];
-    [self.shareButton setBackgroundImage:[UIImage imageNamed:@"share.png"] forState:UIControlStateNormal];
-    self.Canvas.layer.borderWidth = 2;
-    self.Canvas.layer.borderColor = [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1].CGColor;
-
-    
-    self.scrollview.scrollEnabled = YES;
-    [self.scrollview setContentOffset:CGPointMake(0, 109) animated:YES];
-    [self.scrollview setContentSize:CGSizeMake(0, 160)];
-    [self.scrollview setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
-    
+	// Do any additional setup after loading the view
+    [self simpleinit];
     NSMutableArray * pics = [NSMutableArray arrayWithCapacity:0];
     aPlist = [[NSArray alloc]init];
     aPlist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"piclist" ofType:@"plist"]];
@@ -61,21 +53,53 @@ int flag[4] = {0,0,0,0};
         if(picinfo){
             x=(i%4)*76+11;
             y=(i/4)*76;
-            images = [[UIImageView alloc]initWithFrame:CGRectMake(x, y, 70, 70)];
-            imageArray[i] = images;
+            buttons = [[UIButton alloc]initWithFrame:CGRectMake(x, y, 70, 70)];
+            myArray[i] = buttons;
 //            [imagesArray addObject:images];
-            [imageArray[i] setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",
-                                                  [[aPlist objectAtIndex:i]objectForKey:@"name"]]]];
-//            [button addTarget:nil action:@selector(chooseImage) forControlEvents:UIControlEventTouchUpInside];
-            [self.scrollview addSubview:images];
+            [myArray[i] setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",
+                                                                [[aPlist objectAtIndex:i]objectForKey:@"name"]]] forState:UIControlStateNormal];
+            [myArray[i] addTarget:nil action:@selector(chooseImage:) forControlEvents:UIControlEventTouchUpInside];
+            [self.scrollview addSubview:buttons];
         }
     }
     flag[0] = 1;
 }
--(void)chooseImage
+
+- (void)simpleinit
 {
+    [self.saveButton setBackgroundImage:[UIImage imageNamed:@"save.png"] forState:UIControlStateNormal];
+    [self.shareButton setBackgroundImage:[UIImage imageNamed:@"share.png"] forState:UIControlStateNormal];
+    self.Canvas.layer.borderWidth = 2;
+    self.Canvas.layer.borderColor = [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1].CGColor;
+    
+    self.scrollview.scrollEnabled = YES;//这是默认值
+    [self.scrollview setContentOffset:CGPointMake(0, 0) animated:YES];
+    [self.scrollview setContentSize:CGSizeMake(0, 160)];
+    [self.scrollview setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
+    
+    myBarButtonItem[0] = self.bar1;
+    myBarButtonItem[1] = self.bar2;
+}
+
+-(void)chooseImage:(UIButton *)button
+{
+    if(flag[0] == 1){
+        selectedImage = [[UIImage alloc]init];
+        selectedImage = [button backgroundImageForState:UIControlStateNormal];
+        [self.Canvas setImage:selectedImage];
+    }
+    else{
+        UIGraphicsBeginImageContext(CGSizeMake(300, 300));
+        [self.Canvas.image drawInRect:self.Canvas.frame];
+        UIImage * markImage=[button backgroundImageForState:UIControlStateNormal];
+        [markImage drawInRect:CGRectMake(150, 150, 100, 100)];
+        UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        [self.Canvas setImage:newImage];
+    }
     
 }
+
 //粗暴而简单的方法，尼玛，nsmultablearray为什么不可以
 - (IBAction)bar1Action:(id)sender
 {
@@ -86,19 +110,20 @@ int flag[4] = {0,0,0,0};
     for(int i= 0;i<self.datasource.count;i++){
         picinfo = [self.datasource objectAtIndex:i];
         if(picinfo){
-            [imageArray[i] setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",
-                                                  [[aPlist objectAtIndex:i]objectForKey:@"name"]]]];
-
-            [self.scrollview addSubview:images];
+            [myArray[i] setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",
+                                                                [[aPlist objectAtIndex:i]objectForKey:@"name"]]] forState:UIControlStateNormal];
+            [myArray[i] addTarget:nil action:@selector(chooseImage:) forControlEvents:UIControlEventTouchUpInside];
+            [self.scrollview addSubview:buttons];
         }
     }
     
     //用于判断之前的图片数量和现在的图片数量；
+    //这里需要在if前获得减法的值，不然目测会因为类型转换发生意外
     NSInteger inter=temp-self.datasource.count;
     if(inter > 0){
         for(int i = 0;i<(temp-self.datasource.count);i++)
         {
-            [imageArray[i+self.datasource.count] setImage:nil];
+            [myArray[i+self.datasource.count] setBackgroundImage:nil forState:UIControlStateNormal];
         }
     }
 
@@ -122,16 +147,18 @@ int flag[4] = {0,0,0,0};
     for(int i= 0;i < self.datasourceMark.count;i++){
         picinfo = [self.datasourceMark objectAtIndex:i];
         if(picinfo){
-            [imageArray[i] setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",
-                                                  [[aPlistMark objectAtIndex:i]objectForKey:@"name"]]]];
-            [self.scrollview addSubview:images];
+            [myArray[i] setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",
+                                                                [[aPlistMark objectAtIndex:i]objectForKey:@"name"]]] forState:UIControlStateNormal];
+            [myArray[i] addTarget:nil action:@selector(chooseImage:) forControlEvents:UIControlEventTouchUpInside];
+            [self.scrollview addSubview:buttons];
         }
     }
     //用于判断之前的图片数量和现在的图片数量；
-    if((temp - self.datasourceMark.count)>0){
+    NSInteger inter=temp-self.datasourceMark.count;
+    if(inter > 0){
         for(int i=0;i<(temp-self.datasourceMark.count);i++)
         {
-            [imageArray[i+self.datasourceMark.count] setImage:nil];
+            [myArray[i+self.datasourceMark.count]setBackgroundImage:nil forState:UIControlStateNormal];
         }
     }
 }
@@ -142,6 +169,7 @@ int flag[4] = {0,0,0,0};
     for(int i=0;i<4;i++){
         if(flag[i] == 1){
             temp1 = i;
+            myBarButtonItem[i].tintColor = [UIColor colorWithRed:8/255.0 green:126/255.0 blue:255/255.0 alpha:1];
             flag[i] = 0;
             break;
         }
@@ -156,6 +184,17 @@ int flag[4] = {0,0,0,0};
     return 0;
 }
 
+- (IBAction)actionSave:(id)sender
+{
+    UIImageWriteToSavedPhotosAlbum([self.Canvas image], nil, nil, nil);
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"存储拼图成功"
+                                                    message:@"已将拼图存储于图片库中，打开照片程序即可查看。"
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -166,5 +205,9 @@ int flag[4] = {0,0,0,0};
 - (IBAction)puzzleCancel:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)puzzleClear:(id)sender
+{
+    self.Canvas.image = nil;
 }
 @end
