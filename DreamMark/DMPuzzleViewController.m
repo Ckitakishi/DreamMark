@@ -17,10 +17,20 @@
 @synthesize buttons;
 @synthesize buttonsArray;
 @synthesize selectedImage;
+@synthesize markImage;
+@synthesize markImageView;
+@synthesize storyImageView;
+@synthesize othersImageView;
+@synthesize pan;
 
+CGPoint currentPointMark;
+CGPoint currentPointStory;
+CGPoint currentPointOthers;
 UIButton * myArray[20];
 UIBarButtonItem * myBarButtonItem[4];
 int flag[4] = {0,0,0,0};
+int flag1[4] ={0,0,0,0};
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -48,18 +58,21 @@ int flag[4] = {0,0,0,0};
     self.datasource = [[NSArray alloc]initWithArray:pics];
     
     NSInteger x,y;
+    for(int i=0;i<20;i++){
+        x=(i%4)*76+11;
+        y=(i/4)*76;
+        buttons = [[UIButton alloc]initWithFrame:CGRectMake(x, y, 70, 70)];
+        myArray[i] = buttons;
+        [self.scrollview addSubview:buttons];
+    }
+    
     for(int i= 0;i<self.datasource.count;i++){
         picinfo = [self.datasource objectAtIndex:i];
         if(picinfo){
-            x=(i%4)*76+11;
-            y=(i/4)*76;
-            buttons = [[UIButton alloc]initWithFrame:CGRectMake(x, y, 70, 70)];
-            myArray[i] = buttons;
 //            [imagesArray addObject:images];
             [myArray[i] setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",
                                                                 [[aPlist objectAtIndex:i]objectForKey:@"name"]]] forState:UIControlStateNormal];
             [myArray[i] addTarget:nil action:@selector(chooseImage:) forControlEvents:UIControlEventTouchUpInside];
-            [self.scrollview addSubview:buttons];
         }
     }
     flag[0] = 1;
@@ -90,16 +103,78 @@ int flag[4] = {0,0,0,0};
         selectedImage = [button backgroundImageForState:UIControlStateNormal];
         [self.Canvas setImage:selectedImage];
     }
-    else{
+    else if(flag[1] == 1){
+        
+        [self.Canvas setImage:selectedImage];
+        if(flag1[1]==0){
+            markImageView = [[UIImageView alloc]initWithFrame:CGRectMake(150, 150, 100, 100)];
+        }
         UIGraphicsBeginImageContext(CGSizeMake(300, 300));
         [self.Canvas.image drawInRect:self.Canvas.frame];
-        UIImage * markImage=[button backgroundImageForState:UIControlStateNormal];
-        [markImage drawInRect:CGRectMake(150, 150, 100, 100)];
-        UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        [self.Canvas setImage:newImage];
+        
+        [self.Canvas addSubview:markImageView];
+        markImage=[button backgroundImageForState:UIControlStateNormal];
+//        [markImage drawInRect:CGRectMake(150, 150, 100, 100)];
+        [markImageView setImage:markImage];
+        //都需要设置可交互
+        [markImageView setUserInteractionEnabled:YES];
+        [self.Canvas setUserInteractionEnabled:YES];
+        pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(markHandlePan:)];
+        [markImageView addGestureRecognizer:pan];
+//        UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+//        UIGraphicsEndImageContext();
+//        [self.Canvas setImage:newImage];
+        flag1[1]++;
+    }
+    else if(flag[2] == 1){
+        if(flag1[2] == 0){
+            storyImageView = [[UIImageView alloc]initWithFrame:CGRectMake(50, 150, 100, 100)];
+        }
+        UIGraphicsBeginImageContext(CGSizeMake(300, 300));
+        [self.Canvas.image drawInRect:self.Canvas.frame];
+        [storyImageView setUserInteractionEnabled:YES];
+        [self.Canvas setUserInteractionEnabled:YES];
+        [self.Canvas addSubview:storyImageView];
+        markImage=[button backgroundImageForState:UIControlStateNormal];
+        [storyImageView setImage:markImage];
+        pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(storyHandlePan:)];
+        [storyImageView addGestureRecognizer:pan];
+        flag1[2]++;
+    }
+    else{
+        if(flag1[3] == 0){
+            othersImageView = [[UIImageView alloc]initWithFrame:CGRectMake(100, 150, 100, 100)];
+        }
+        UIGraphicsBeginImageContext(CGSizeMake(300, 300));
+        [self.Canvas.image drawInRect:self.Canvas.frame];
+        [othersImageView setUserInteractionEnabled:YES];
+        [self.Canvas setUserInteractionEnabled:YES];
+        [self.Canvas addSubview:othersImageView];
+        markImage=[button backgroundImageForState:UIControlStateNormal];
+        [othersImageView setImage:markImage];
+        pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(othersHandlePan:)];
+        [othersImageView addGestureRecognizer:pan];
+        flag1[3]++;
     }
     
+}
+-(void)markHandlePan:(UIPanGestureRecognizer *)gestureRecognizer
+{
+    currentPointMark = [gestureRecognizer locationInView:self.Canvas];
+    [markImageView setCenter:currentPointMark];
+//    NSLog(@"%f,%f",currentPoint.x,currentPoint.y);
+}
+-(void)storyHandlePan:(UIPanGestureRecognizer *)gestureRecognizer
+{
+    currentPointStory = [gestureRecognizer locationInView:self.Canvas];
+    [storyImageView setCenter:currentPointStory];
+    //    NSLog(@"%f,%f",currentPoint.x,currentPoint.y);
+}
+-(void)othersHandlePan:(UIPanGestureRecognizer *)gestureRecognizer
+{
+    currentPointOthers = [gestureRecognizer locationInView:self.Canvas];
+    [othersImageView setCenter:currentPointOthers];
+    //    NSLog(@"%f,%f",currentPoint.x,currentPoint.y);
 }
 
 //粗暴而简单的方法，尼玛，nsmultablearray为什么不可以
@@ -204,6 +279,7 @@ int flag[4] = {0,0,0,0};
 - (IBAction)bar4Action:(id)sender
 {
     self.bar4.tintColor = [UIColor colorWithRed:202/255.0 green:169/255.0 blue:230/255.0 alpha:1];
+    [self.scrollview setContentSize:CGSizeMake(0, 236)];//仍然需要考虑
     NSInteger temp = [self judge:4];
     
     NSMutableArray * picsOthers = [NSMutableArray arrayWithCapacity:0];
@@ -265,8 +341,20 @@ int flag[4] = {0,0,0,0};
     return 0;
 }
 
+
 - (IBAction)actionSave:(id)sender
 {
+    //在保存中将imageview上的图片保存在画板上。
+    [self.Canvas setImage:selectedImage];
+    UIGraphicsBeginImageContext(CGSizeMake(300, 300));
+    [self.Canvas.image drawInRect:self.Canvas.frame];
+    [[markImageView image] drawInRect:CGRectMake(currentPointMark.x-50 ,currentPointMark.y-50, 100, 100)];
+    [[storyImageView image]drawInRect:CGRectMake(currentPointStory.x-50,currentPointStory.y-50, 100, 100)];
+    [[othersImageView image]drawInRect:CGRectMake(currentPointOthers.x-50, currentPointOthers.y-50, 100, 100)];
+    UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    [self.Canvas setImage:newImage];
+    
     UIImageWriteToSavedPhotosAlbum([self.Canvas image], nil, nil, nil);
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"存储拼图成功"
                                                     message:@"已将拼图存储于图片库中，打开照片程序即可查看。"

@@ -30,6 +30,13 @@
 @property(nonatomic,strong) UIButton * buttons;
 @property(nonatomic,strong) NSMutableArray * buttonsArray;
 @property(nonatomic,strong) UIImage * selectedImage;
+@property(nonatomic,strong) UIImage * markImage;
+
+@property(nonatomic,strong) UIImageView * markImageView;
+@property(nonatomic,strong) UIImageView * storyImageView;
+@property(nonatomic,strong) UIImageView  * othersImageView;
+
+@property(nonatomic,strong) UIPanGestureRecognizer * pan;
 
 - (IBAction)bar1Action:(id)sender;
 - (IBAction)bar2Action:(id)sender;

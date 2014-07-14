@@ -71,8 +71,8 @@ int fBrushWidth=5;
     {
         CGContextClearRect(context, CGRectMake(currentPoint.x-fBrushWidth,
                                                currentPoint.y-fBrushWidth,
-                                               fBrushWidth*2,
-                                               fBrushWidth*2));
+                                               fBrushWidth*3,
+                                               fBrushWidth*3));
     }
     else
     {
@@ -102,8 +102,8 @@ int fBrushWidth=5;
         {
             CGContextClearRect(context, CGRectMake(currentPoint.x-fBrushWidth,
                                                    currentPoint.y-fBrushWidth,
-                                                   fBrushWidth*2,
-                                                   fBrushWidth*2));
+                                                   fBrushWidth*3,
+                                                   fBrushWidth*3));
         }
         else
         {
