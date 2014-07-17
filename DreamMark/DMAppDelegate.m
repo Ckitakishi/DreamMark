@@ -7,12 +7,13 @@
 //
 
 #import "DMAppDelegate.h"
-
+#import "UMSocial.h"
 @implementation DMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [UMSocialData setAppKey:@"53c7b62a56240bcfc4013807"];
     return YES;
 }
 							

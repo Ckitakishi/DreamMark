@@ -7,7 +7,7 @@
 //
 
 #import "DMGraffitiViewController.h"
-
+#import "UMSocial.h"
 @interface DMGraffitiViewController ()
 {
     CGFloat  fGreen;
@@ -37,6 +37,7 @@ int fBrushWidth=5;
     // Do any additional setup after loading the view.
     [self.saveButton setBackgroundImage:[UIImage imageNamed:@"save.png"] forState:UIControlStateNormal];
     [self.shareButton setBackgroundImage:[UIImage imageNamed:@"share.png"] forState:UIControlStateNormal];
+    [self.colButton setBackgroundImage:[UIImage imageNamed:@"col.png"] forState:UIControlStateNormal];
     self.Canvas.layer.borderWidth = 2;
     self.Canvas.layer.borderColor = [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1].CGColor;
     [self initColor];
@@ -144,10 +145,15 @@ int fBrushWidth=5;
     fGreen=208.0f/255.0f;
     fBlue=0.0f/255.0f;
 }
-//分享功能使用sharesdk，暂未实现。。
+//分享功能使用友盟，暂未实现。。
 - (IBAction)acitonShare:(id)sender
 {
-    
+    [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:@"53c7b62a56240bcfc4013807"
+                                      shareText:@"Mark my dream."
+                                     shareImage:[self.Canvas image]
+                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToRenren,UMShareToDouban,nil]
+                                       delegate:nil];
 }
 
 - (IBAction)actionSave:(id)sender
@@ -159,6 +165,10 @@ int fBrushWidth=5;
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
     [alert show];
+}
+- (IBAction)actionCol:(id)sender
+{
+    
 }
 
 - (IBAction)buttonEraser:(id)sender

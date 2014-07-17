@@ -87,7 +87,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZa-Dh-anh">
-                                <rect key="frame" x="0.0" y="511" width="160" height="57"/>
+                                <rect key="frame" x="0.0" y="512" width="107" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -97,11 +97,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqX-FW-nm2">
-                                <rect key="frame" x="160" y="511" width="160" height="57"/>
+                                <rect key="frame" x="213" y="512" width="107" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="actionShare:" destination="LVS-2F-aBY" eventType="touchUpInside" id="o5R-F4-hwg"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="94J-eH-4xQ">
                                 <rect key="frame" x="0.0" y="109" width="320" height="95"/>
@@ -136,6 +139,16 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KI-wD-aoO">
+                                <rect key="frame" x="107" y="512" width="106" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionCol:" destination="LVS-2F-aBY" eventType="touchUpInside" id="yKz-OS-h9g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -157,6 +170,7 @@
                         <outlet property="bar2" destination="B2h-UO-ZnY" id="761-jL-4Dt"/>
                         <outlet property="bar3" destination="F1V-Xd-Opm" id="7Xv-d3-zdy"/>
                         <outlet property="bar4" destination="5CW-ya-Ucv" id="HtW-5u-FU7"/>
+                        <outlet property="colButton" destination="9KI-wD-aoO" id="odU-yN-nhI"/>
                         <outlet property="puzzelView" destination="Nvj-i9-7Nl" id="Fny-AH-yQq"/>
                         <outlet property="saveButton" destination="eZa-Dh-anh" id="cXy-iq-Py5"/>
                         <outlet property="scrollview" destination="94J-eH-4xQ" id="7zz-Lp-iXT"/>
@@ -191,7 +205,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAK-pM-Bor">
-                                <rect key="frame" x="0.0" y="511" width="160" height="57"/>
+                                <rect key="frame" x="0.0" y="512" width="107" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -201,7 +215,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpV-Z9-xgu">
-                                <rect key="frame" x="160" y="511" width="160" height="57"/>
+                                <rect key="frame" x="213" y="512" width="107" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -280,6 +294,16 @@
                                     <action selector="buttonEraser:" destination="gwl-ZJ-BET" eventType="touchUpInside" id="XCa-Iy-fW2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vex-LF-k9K">
+                                <rect key="frame" x="103" y="512" width="106" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionCol:" destination="gwl-ZJ-BET" eventType="touchUpInside" id="lxY-AO-XA8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -297,6 +321,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="Canvas" destination="Xct-R8-Yro" id="oq4-zO-E3C"/>
+                        <outlet property="colButton" destination="Vex-LF-k9K" id="PDV-ZK-US2"/>
                         <outlet property="eraser" destination="qkf-5u-YvL" id="FXy-Tv-vqO"/>
                         <outlet property="myView" destination="vvm-9N-1qo" id="d3C-Ep-N1G"/>
                         <outlet property="saveButton" destination="jAK-pM-Bor" id="aqk-4q-lIm"/>

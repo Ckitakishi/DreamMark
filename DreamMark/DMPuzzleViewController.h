@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollview;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
+@property (weak, nonatomic) IBOutlet UIButton *colButton;
 @property (weak, nonatomic) IBOutlet UIImageView *Canvas;
 @property (weak, nonatomic) IBOutlet UIView *puzzelView;
 
@@ -44,4 +45,6 @@
 - (IBAction)puzzleClear:(id)sender;
 - (IBAction)actionSave:(id)sender;
 - (IBAction)puzzleCancel:(id)sender;
+- (IBAction)actionCol:(id)sender;
+- (IBAction)actionShare:(id)sender;
 @end

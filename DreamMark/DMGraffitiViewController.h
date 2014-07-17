@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DMGraffitiViewController : UIViewController
+- (IBAction)actionCol:(id)sender;
 - (IBAction)graffitiClear:(id)sender;
 - (IBAction)acitonShare:(id)sender;
 - (IBAction)actionSave:(id)sender;
@@ -24,5 +25,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *Canvas;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
+@property (weak, nonatomic) IBOutlet UIButton *colButton;
 
 @end

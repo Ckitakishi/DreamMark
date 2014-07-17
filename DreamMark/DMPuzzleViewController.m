@@ -8,6 +8,7 @@
 
 #import "DMPuzzleViewController.h"
 #import "DMPicInfo.h"
+#import "UMSocial.h"
 @interface DMPuzzleViewController ()
 
 @end
@@ -83,6 +84,7 @@ int flag1[4] ={0,0,0,0};
 {
     [self.saveButton setBackgroundImage:[UIImage imageNamed:@"save.png"] forState:UIControlStateNormal];
     [self.shareButton setBackgroundImage:[UIImage imageNamed:@"share.png"] forState:UIControlStateNormal];
+    [self.colButton setBackgroundImage:[UIImage imageNamed:@"col.png"] forState:UIControlStateNormal];
     self.Canvas.layer.borderWidth = 2;
     self.Canvas.layer.borderColor = [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1].CGColor;
     
@@ -372,6 +374,31 @@ int flag1[4] ={0,0,0,0};
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
     [alert show];
+
+}
+- (IBAction)actionCol:(id)sender
+{
+    
+}
+
+- (IBAction)actionShare:(id)sender
+{
+    [self.Canvas setImage:selectedImage];
+    UIGraphicsBeginImageContext(CGSizeMake(300, 300));
+    [self.Canvas.image drawInRect:self.Canvas.frame];
+    [[markImageView image] drawInRect:CGRectMake(currentPointMark.x-50 ,currentPointMark.y-50, 100, 100)];
+    [[storyImageView image]drawInRect:CGRectMake(currentPointStory.x-50,currentPointStory.y-50, 100, 100)];
+    [[othersImageView image]drawInRect:CGRectMake(currentPointOthers.x-50, currentPointOthers.y-50, 100, 100)];
+    UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    [self.Canvas setImage:newImage];
+
+    [UMSocialSnsService presentSnsIconSheetView:self
+                                         appKey:@"53c7b62a56240bcfc4013807"
+                                      shareText:@"Mark my dream."
+                                     shareImage:[self.Canvas image]
+                                shareToSnsNames:[NSArray arrayWithObjects:UMShareToSina,UMShareToTencent,UMShareToRenren,UMShareToDouban,nil]
+                                       delegate:nil];
 
 }
 
