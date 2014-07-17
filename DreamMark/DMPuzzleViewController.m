@@ -21,6 +21,7 @@
 @synthesize markImageView;
 @synthesize storyImageView;
 @synthesize othersImageView;
+@synthesize imageViews;
 @synthesize pan;
 
 CGPoint currentPointMark;
@@ -94,6 +95,12 @@ int flag1[4] ={0,0,0,0};
     myBarButtonItem[1] = self.bar2;
     myBarButtonItem[2] = self.bar3;
     myBarButtonItem[3] = self.bar4;
+    
+    imageViews = [[NSMutableArray alloc]init];
+    //初始化每个currentpoint的值
+    currentPointMark = CGPointMake(200, 200);
+    currentPointStory = CGPointMake(100, 200);
+    currentPointOthers = CGPointMake(150, 200);
 }
 
 -(void)chooseImage:(UIButton *)button
@@ -114,16 +121,13 @@ int flag1[4] ={0,0,0,0};
         
         [self.Canvas addSubview:markImageView];
         markImage=[button backgroundImageForState:UIControlStateNormal];
-//        [markImage drawInRect:CGRectMake(150, 150, 100, 100)];
         [markImageView setImage:markImage];
         //都需要设置可交互
         [markImageView setUserInteractionEnabled:YES];
         [self.Canvas setUserInteractionEnabled:YES];
         pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(markHandlePan:)];
         [markImageView addGestureRecognizer:pan];
-//        UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-//        UIGraphicsEndImageContext();
-//        [self.Canvas setImage:newImage];
+        [imageViews addObject:markImageView];
         flag1[1]++;
     }
     else if(flag[2] == 1){
@@ -139,6 +143,7 @@ int flag1[4] ={0,0,0,0};
         [storyImageView setImage:markImage];
         pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(storyHandlePan:)];
         [storyImageView addGestureRecognizer:pan];
+        [imageViews addObject:storyImageView];
         flag1[2]++;
     }
     else{
@@ -154,6 +159,7 @@ int flag1[4] ={0,0,0,0};
         [othersImageView setImage:markImage];
         pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(othersHandlePan:)];
         [othersImageView addGestureRecognizer:pan];
+        [imageViews addObject:othersImageView];
         flag1[3]++;
     }
     
@@ -181,6 +187,8 @@ int flag1[4] ={0,0,0,0};
 - (IBAction)bar1Action:(id)sender
 {
     self.bar1.tintColor = [UIColor colorWithRed:102/255.0 green:208/255.0 blue:0/255.0 alpha:1];
+    //合适的scrollview的范围
+    [self.scrollview setContentSize:CGSizeMake(320, ((self.datasource.count-1)/4+1)*76)];
     NSInteger temp = [self judge:1];
     
     DMPicInfo * picinfo;
@@ -221,6 +229,7 @@ int flag1[4] ={0,0,0,0};
         [picsMark addObject:picinfo];
     }
     self.datasourceMark = [[NSArray alloc]initWithArray:picsMark];
+    [self.scrollview setContentSize:CGSizeMake(320, ((self.datasourceMark.count-1)/4+1)*76)];
     for(int i= 0;i < self.datasourceMark.count;i++){
         picinfo = [self.datasourceMark objectAtIndex:i];
         if(picinfo){
@@ -247,7 +256,8 @@ int flag1[4] ={0,0,0,0};
     
     NSMutableArray * picsStory = [NSMutableArray arrayWithCapacity:0];
     NSArray * aPlistStory = [[NSArray alloc]init];
-    aPlistStory = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"piclist3" ofType:@"plist"]];
+    aPlistStory = [NSArray arrayWithContentsOfFile:
+                   [[NSBundle mainBundle]pathForResource:@"piclist3" ofType:@"plist"]];
     DMPicInfo * picinfo = picinfo = [[DMPicInfo alloc]init];
     for(NSDictionary * onePicInfo in aPlistStory)
     {
@@ -256,6 +266,7 @@ int flag1[4] ={0,0,0,0};
         [picsStory addObject:picinfo];
     }
     self.datasourceStory = [[NSArray alloc]initWithArray:picsStory];
+    [self.scrollview setContentSize:CGSizeMake(320, ((self.datasourceStory.count-1)/4+1)*76)];
     for(int i= 0;i < self.datasourceStory.count;i++){
         picinfo = [self.datasourceStory objectAtIndex:i];
         if(picinfo){
@@ -279,7 +290,6 @@ int flag1[4] ={0,0,0,0};
 - (IBAction)bar4Action:(id)sender
 {
     self.bar4.tintColor = [UIColor colorWithRed:202/255.0 green:169/255.0 blue:230/255.0 alpha:1];
-    [self.scrollview setContentSize:CGSizeMake(0, 236)];//仍然需要考虑
     NSInteger temp = [self judge:4];
     
     NSMutableArray * picsOthers = [NSMutableArray arrayWithCapacity:0];
@@ -293,6 +303,7 @@ int flag1[4] ={0,0,0,0};
         [picsOthers addObject:picinfo];
     }
     self.datasourceOthers = [[NSArray alloc]initWithArray:picsOthers];
+    [self.scrollview setContentSize:CGSizeMake(320, ((self.datasourceOthers.count-1)/4+1)*76)];
     for(int i= 0;i < self.datasourceOthers.count;i++){
         picinfo = [self.datasourceOthers objectAtIndex:i];
         if(picinfo){
@@ -354,7 +365,6 @@ int flag1[4] ={0,0,0,0};
     UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     [self.Canvas setImage:newImage];
-    
     UIImageWriteToSavedPhotosAlbum([self.Canvas image], nil, nil, nil);
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"存储拼图成功"
                                                     message:@"已将拼图存储于图片库中，打开照片程序即可查看。"
@@ -373,10 +383,16 @@ int flag1[4] ={0,0,0,0};
 
 - (IBAction)puzzleCancel:(id)sender
 {
+    for (int i=0; i<4; i++) {
+        flag1[i] = 0;
+    }
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)puzzleClear:(id)sender
 {
+    for(UIImageView * view in imageViews){
+        if(view) [view removeFromSuperview];
+    }
     self.Canvas.image = nil;
 }
 

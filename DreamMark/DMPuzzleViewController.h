@@ -35,6 +35,7 @@
 @property(nonatomic,strong) UIImageView * markImageView;
 @property(nonatomic,strong) UIImageView * storyImageView;
 @property(nonatomic,strong) UIImageView  * othersImageView;
+@property(nonatomic,strong) NSMutableArray * imageViews;
 
 @property(nonatomic,strong) UIPanGestureRecognizer * pan;
 
